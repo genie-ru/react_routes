@@ -1,14 +1,28 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './components/home';
-import Post  from './components/post';
+import Posts  from './components/posts';
 import Profile from './components/profile';
 
 
 const App = () => {
   return (
     <div>
-      App
+      <header>
+        Header
+      </header>
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="home" element={<Home/>}/>
+          <Route path="posts" element={<Posts/>}/>
+          <Route path="profile" element={<Profile/>}/>
+        </Routes>  
+        <footer>
+          Footer
+        </footer>
+      </BrowserRouter>
+
     </div>
   );
 }
